@@ -70,17 +70,16 @@ const game = {
     team2: 6.5,
   },
 };
-const value1 = Object.values(game.scored);
-const value2 = Object.values(game.odds);
-const { team1, team2 } = game;
-console.log(team1, team2);
-const arr = [team1,'dar']
-// for (const [i, el] of value1.entries()) {
-//   console.log(`Goal ${i}: ${el}`);
-// };
-// let sum = 0;
-// for (const i of value2) {
-//   sum += i;
 
-// };
-// console.log(sum);
+
+// let scores = {}
+// for (let i of game.scored) {
+//   scores[i] = (scores[i] || 0) + 1;
+// }
+
+// console.log(scores);
+let sum = 0;
+for (let i of Object.values(game.odds)) {
+  sum += i;
+}
+console.log(sum);
